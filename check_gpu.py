@@ -1,14 +1,14 @@
 import torch
 
 print("Versi PyTorch:", torch.__version__)
+print("Versi CUDA:", torch.version.cuda)
+print("CUDA tersedia:", torch.cuda.is_available())
 
 if torch.cuda.is_available():
+    print("Nama GPU:", torch.cuda.get_device_name(0))
 
-    print("CUDA tersedia!")
-    print("GPU:", torch.cuda.get_device_name(0))
-    print("Jumlah GPU:", torch.cuda.device_count())
-
+    x = torch.rand(3, 3).cuda()
+    print("\nTensor pada GPU:")
+    print(x)
 else:
-
-    print("CUDA tidak tersedia.")
-    print("Training akan menggunakan CPU jika tidak ada akselerator lain.")
+    print("GPU belum dapat digunakan.")
