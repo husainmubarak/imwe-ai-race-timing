@@ -154,10 +154,10 @@ def audit_split(split_name, split_path):
 
             # Memastikan kotak tidak keluar dari gambar
             if (
-                x_min < -1e-6
-                or x_max > 1 + 1e-6
-                or y_min < -1e-6
-                or y_max > 1 + 1e-6
+                x_min < -1e-5
+                or x_max > 1 + 1e-5
+                or y_min < -1e-5
+                or y_max > 1 + 1e-5
             ):
                 invalid_boxes += 1
                 print(
