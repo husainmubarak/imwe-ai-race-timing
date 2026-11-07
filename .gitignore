@@ -7,3 +7,4 @@ output/
 *.mov
 BIB_Detection-2
 runs/detect/runs/detect/bib_test_predictions
+runs/ocr_test 
