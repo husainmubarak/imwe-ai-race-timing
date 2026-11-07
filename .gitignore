@@ -6,3 +6,4 @@ output/
 *.mp4
 *.mov
 BIB_Detection-2
+runs/detect/runs/detect/bib_test_predictions
